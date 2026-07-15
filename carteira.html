@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha Carteira de Dividendos — Renda Extra Dividendos</title>
+<meta name="description" content="Monte sua carteira de ações e FIIs pagadores de dividendos, acompanhe valor investido, resultado e renda passiva estimada. Seus dados ficam salvos só no seu navegador.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="ticker-tape"><div class="track" id="tickerTrack"></div></div>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <span class="mark">R+D</span>
+      <span>Renda Extra <small>Dividendos</small></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="index.html">Início</a>
+      <a href="simulador.html">Simulador</a>
+      <a href="carteira.html" class="active">Minha Carteira</a>
+      <a href="aprenda.html">Aprenda a Investir</a>
+    </nav>
+    <a href="simulador.html" class="nav-cta">Simular ativo</a>
+    <button class="burger" id="burger">☰</button>
+  </div>
+</header>
+
+<section style="padding-bottom:24px">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Minha carteira</div>
+      <h1 style="font-size:clamp(28px,3.6vw,40px)">Acompanhe seus ativos em um só lugar</h1>
+      <p style="color:var(--ink-soft)">Tudo é salvo localmente no seu navegador — ninguém mais vê seus dados, e nada é enviado para nenhum servidor. Se você limpar os dados do navegador ou trocar de aparelho, a carteira não acompanha.</p>
+    </div>
+
+    <div class="grid grid-4" id="cardsCarteira" style="margin-bottom:32px;"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap grid" style="grid-template-columns:.85fr 1.15fr; align-items:start; gap:32px;">
+
+    <div class="panel">
+      <h3 style="margin-bottom:14px;">Adicionar ativo</h3>
+
+      <div class="field">
+        <label>Sugestões rápidas</label>
+        <div id="chipsSugestoes"></div>
+      </div>
+
+      <div class="field">
+        <label>Ticker</label>
+        <input type="text" id="cTicker" placeholder="Ex: TAEE11" maxlength="8" style="text-transform:uppercase">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Quantidade</label>
+          <input type="number" id="cQtd" min="1" step="1" value="100">
+        </div>
+        <div class="field">
+          <label>Preço médio pago (R$)</label>
+          <input type="number" id="cPrecoMedio" min="0.01" step="0.01" placeholder="0,00">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Preço atual (R$)</label>
+          <input type="number" id="cPrecoAtual" min="0.01" step="0.01" placeholder="0,00">
+        </div>
+        <div class="field">
+          <label>DY anual estimado (%)</label>
+          <input type="number" id="cDy" min="0" step="0.1" placeholder="0,0">
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block" id="btnAdicionar">Adicionar à carteira</button>
+      <p class="hint" style="margin-top:10px;">Não temos cotação em tempo real — atualize o "preço atual" de vez em quando para manter os números certos.</p>
+    </div>
+
+    <div>
+      <div class="panel" id="painelTabela">
+        <h3 style="margin-bottom:14px;">Meus ativos</h3>
+        <div style="overflow-x:auto;">
+        <table class="ledger" id="tabelaCarteira">
+          <thead>
+            <tr>
+              <th>Ativo</th><th class="num">Qtd</th><th class="num">Preço médio</th>
+              <th class="num">Preço atual</th><th class="num">Investido</th><th class="num">Atual</th>
+              <th class="num">Resultado</th><th class="num">Renda/mês</th><th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        </div>
+        <div class="empty" id="estadoVazio">
+          <h3>Sua carteira está vazia</h3>
+          <p>Adicione o primeiro ativo ao lado — pode ser algo que você já tem ou algo que está de olho.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <a href="index.html" class="brand" style="color:var(--paper); margin-bottom:12px;">
+        <span class="mark">R+D</span><span>Renda Extra Dividendos</span>
+      </a>
+      <p class="disclaimer">Os dados da sua carteira são armazenados apenas no armazenamento local do seu navegador (localStorage) e não são enviados a nenhum servidor. Este site não acessa cotações em tempo real — os valores dependem do que você informa.</p>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <a href="index.html">Início</a>
+      <a href="simulador.html">Simulador</a>
+      <a href="carteira.html">Minha Carteira</a>
+      <a href="aprenda.html">Aprenda a Investir</a>
+    </div>
+    <div>
+      <h4>Sobre</h4>
+      <a href="aprenda.html#faq">Perguntas frequentes</a>
+      <a href="aprenda.html">Glossário do investidor</a>
+    </div>
+  </div>
+  <div class="wrap bottom"><span>© <span id="anoAtual"></span> Renda Extra Dividendos. Conteúdo educativo, não é recomendação de investimento.</span></div>
+</footer>
+
+<script src="js/dados.js"></script>
+<script src="js/main.js"></script>
+<script src="js/carteira.js"></script>
+</body>
+</html>
