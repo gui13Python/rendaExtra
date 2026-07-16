@@ -24,18 +24,20 @@ function montarMenuMobile(){
   const burger = document.getElementById('burger');
   const links = document.getElementById('navLinks');
   if(!burger || !links) return;
-  burger.addEventListener('click', ()=>{
-    const aberto = links.style.display === 'flex';
-    links.style.display = aberto ? 'none' : 'flex';
-    links.style.flexDirection = 'column';
-    links.style.position = 'absolute';
-    links.style.top = '64px';
-    links.style.left = '0';
-    links.style.right = '0';
-    links.style.background = 'var(--paper)';
-    links.style.borderBottom = '1px solid var(--line)';
-    links.style.padding = '12px 24px 20px';
-    links.style.gap = '4px';
+
+  burger.addEventListener('click', (ev)=>{
+    ev.stopPropagation();
+    links.classList.toggle('open');
+  });
+  // fecha ao clicar em um link do menu
+  links.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=> links.classList.remove('open'));
+  });
+  // fecha ao clicar fora do menu
+  document.addEventListener('click', (ev)=>{
+    if(!links.contains(ev.target) && ev.target !== burger){
+      links.classList.remove('open');
+    }
   });
 }
 
@@ -45,8 +47,68 @@ function montarAno(){
   if(el) el.textContent = new Date().getFullYear();
 }
 
+// ---------- PWA: botão "Instalar app" (Android/Chrome/Edge/desktop) ----------
+let promptDeInstalacao = null;
+
+function montarInstalacao(){
+  const navEl = document.querySelector('header.site .nav');
+  if(!navEl) return;
+
+  const btn = document.createElement('button');
+  btn.id = 'btnInstalarApp';
+  btn.className = 'btn btn-gold btn-sm';
+  btn.textContent = 'Instalar app';
+  btn.style.display = 'none';
+  navEl.insertBefore(btn, navEl.querySelector('.burger'));
+
+  window.addEventListener('beforeinstallprompt', (ev)=>{
+    ev.preventDefault();
+    promptDeInstalacao = ev;
+    btn.style.display = 'inline-flex';
+  });
+
+  btn.addEventListener('click', async ()=>{
+    if(!promptDeInstalacao) return;
+    btn.style.display = 'none';
+    promptDeInstalacao.prompt();
+    await promptDeInstalacao.userChoice;
+    promptDeInstalacao = null;
+  });
+
+  window.addEventListener('appinstalled', ()=>{
+    btn.style.display = 'none';
+  });
+
+  // iOS Safari não dispara beforeinstallprompt — mostra dica manual uma vez
+  const iOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const emStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  if(iOS && !emStandalone && !sessionStorage.getItem('dicaIosFechada')){
+    const dica = document.createElement('div');
+    dica.id = 'dicaIos';
+    dica.innerHTML = `
+      <span>Instale este app: toque em <strong>Compartilhar</strong> (□↑) e depois em <strong>"Adicionar à Tela de Início"</strong>.</span>
+      <button aria-label="Fechar">×</button>`;
+    document.body.appendChild(dica);
+    dica.querySelector('button').addEventListener('click', ()=>{
+      dica.remove();
+      sessionStorage.setItem('dicaIosFechada','1');
+    });
+  }
+}
+
+// ---------- PWA: registra o service worker (necessário pra opção "Instalar") ----------
+function registrarServiceWorker(){
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('sw.js').catch((e)=>{
+      console.warn('Service worker não registrado:', e);
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', ()=>{
   montarTickerTape();
   montarMenuMobile();
   montarAno();
+  montarInstalacao();
+  registrarServiceWorker();
 });
