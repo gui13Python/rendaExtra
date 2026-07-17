@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aprenda a Investir em Dividendos — Guia Completo para Iniciantes</title>
-<meta name="description" content="Guia direto ao ponto sobre como investir em dividendos: o que são, como calcular o dividend yield, como montar uma carteira e os erros mais comuns de quem está começando.">
+<title>Aprenda a Investir do Zero — Guia Completo | Renda Extra Dividendos</title>
+<meta name="description" content="Guia completo para começar a investir: o que é investir de verdade, renda fixa, renda variável, como abrir conta numa corretora, como comprar e vender ações e FIIs, e os 3 livros que todo iniciante deveria ler.">
 <link rel="stylesheet" href="style.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#17362A">
@@ -22,33 +22,33 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Preciso de muito dinheiro para abrir conta numa corretora?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Não. A maioria das corretoras brasileiras não cobra nada para abrir conta nem exige valor mínimo de depósito. O valor mínimo de verdade é o preço de um lote do ativo que você quer comprar." }
+    },
+    {
+      "@type": "Question",
+      "name": "Se a corretora quebrar, eu perco meu dinheiro?",
+      "acceptedAnswer": { "@type": "Answer", "text": "As ações, FIIs e outros ativos ficam custodiados na B3 em seu nome (CPF), não na corretora. Se a corretora fechar, o patrimônio continua seu e pode ser transferido para outra. O dinheiro parado em conta na corretora, sem estar investido, é o ponto mais exposto." }
+    },
+    {
+      "@type": "Question",
       "name": "Dividend yield alto é sempre bom sinal?",
       "acceptedAnswer": { "@type": "Answer", "text": "Não necessariamente. Um DY muito acima da média do setor pode indicar que o preço da ação caiu bastante (o que aumenta o yield artificialmente) ou que a empresa distribuiu um provento extraordinário que não deve se repetir. Vale olhar o histórico de vários anos, não só o número dos últimos 12 meses." }
     },
     {
       "@type": "Question",
-      "name": "Preciso de muito dinheiro para começar a investir em dividendos?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Não. Muitas ações e FIIs da B3 custam poucos reais por cota, e é possível comprar um único lote a partir de valores baixos. O que mais importa no início é a constância dos aportes, não o valor de cada um." }
+      "name": "Qual a diferença entre ordem a mercado e ordem limitada?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A ordem a mercado executa na hora, pelo melhor preço disponível no momento — mais rápida, mas você não controla o preço exato. A ordem limitada só executa se o mercado alcançar o preço que você definiu — você controla o preço, mas pode não ser executada." }
     },
     {
       "@type": "Question",
-      "name": "Dividendos de ações têm imposto de renda?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Hoje, dividendos pagos por ações são isentos de Imposto de Renda para pessoa física. Já os Juros sobre Capital Próprio (JCP) sofrem retenção na fonte. As regras podem mudar, então vale sempre confirmar a legislação vigente." }
+      "name": "Dividendos de ações têm Imposto de Renda?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hoje, dividendos pagos por ações são isentos de Imposto de Renda para pessoa física. Já os Juros sobre Capital Próprio (JCP) têm retenção na fonte. As regras podem mudar — sempre confirme a legislação vigente antes de decidir." }
     },
     {
       "@type": "Question",
-      "name": "Qual a diferença entre dividendo e JCP?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ambos são formas de a empresa distribuir lucro aos acionistas. O dividendo é isento de IR e sai do lucro líquido; o JCP é uma despesa dedutível para a empresa, mas chega ao investidor com 15% de imposto retido na fonte." }
-    },
-    {
-      "@type": "Question",
-      "name": "Vale a pena reinvestir os dividendos recebidos?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Para quem ainda está formando patrimônio, reinvestir costuma acelerar bastante o crescimento da carteira, graças aos juros compostos. Quem já vive de renda passiva, por outro lado, pode preferir usar os proventos para as despesas do dia a dia." }
-    },
-    {
-      "@type": "Question",
-      "name": "Quantos ativos diferentes devo ter na carteira?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Não existe número mágico, mas concentrar tudo em uma ou duas empresas aumenta muito o risco. Muitos investidores de dividendos buscam entre 10 e 20 ativos, espalhados por setores diferentes, para reduzir o impacto de um problema pontual em uma única empresa." }
+      "name": "Qual livro devo ler primeiro para começar a investir?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Para organizar a relação com dinheiro no dia a dia, A Psicologia do Dinheiro costuma ser o mais acessível. Pai Rico, Pai Pobre ajuda a mudar a forma de pensar sobre ativos e passivos. O Investidor Inteligente é mais denso e entra em análise de ações — vale ler depois dos outros dois." }
     }
   ]
 }
@@ -68,6 +68,7 @@
       <a href="index.html">Início</a>
       <a href="simulador.html">Simulador</a>
       <a href="carteira.html">Minha Carteira</a>
+      <a href="assistente.html">Assistente IA</a>
       <a href="aprenda.html" class="active">Aprenda a Investir</a>
     </nav>
     <a href="simulador.html" class="nav-cta">Simular agora</a>
@@ -75,84 +76,210 @@
   </div>
 </header>
 
-<section style="padding-bottom:24px">
+<section style="padding-bottom:12px">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Guia do investidor</div>
-      <h1 style="font-size:clamp(28px,3.6vw,40px)">Aprenda a investir em dividendos do zero</h1>
-      <p style="color:var(--ink-soft); max-width:70ch">Cinco capítulos curtos, direto ao ponto, para você entender o essencial antes de colocar dinheiro em qualquer ativo. Sem promessa de ficar rico rápido — só o que realmente importa saber.</p>
+      <div class="eyebrow">Guia completo do investidor</div>
+      <h1 style="font-size:clamp(28px,3.6vw,40px)">Aprenda a investir do zero</h1>
+      <p style="color:var(--ink-soft); max-width:70ch">Da diferença entre investir e gastar até abrir conta numa corretora e comprar sua primeira ação. Dez capítulos curtos, direto ao ponto, mais os três livros que mais ajudam quem está começando.</p>
+    </div>
+    <div class="panel" style="padding:16px 20px;">
+      <div class="badge" style="margin-bottom:10px;">Sumário</div>
+      <div style="display:flex; flex-wrap:wrap; gap:8px;">
+        <a href="#cap1" class="chip">1. O que é investir</a>
+        <a href="#cap2" class="chip">2. Investir x especular</a>
+        <a href="#cap3" class="chip">3. Bancos x corretoras</a>
+        <a href="#cap4" class="chip">4. Perfil de investidor</a>
+        <a href="#cap5" class="chip">5. Renda fixa</a>
+        <a href="#cap6" class="chip">6. Renda variável</a>
+        <a href="#cap7" class="chip">7. Abrir conta</a>
+        <a href="#cap8" class="chip">8. Comprar e vender</a>
+        <a href="#cap9" class="chip">9. Dividendos na prática</a>
+        <a href="#cap10" class="chip">10. Livros essenciais</a>
+        <a href="#faq" class="chip">FAQ</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section style="padding-top:0">
+<section style="padding-top:12px">
   <div class="wrap panel">
 
-    <div class="chapter">
+    <div class="chapter" id="cap1">
       <div class="num">1</div>
       <div>
-        <h3>O que são dividendos</h3>
-        <p>Dividendo é a parte do lucro que uma empresa decide distribuir aos seus acionistas, em vez de reinvestir tudo de volta no negócio. Quem tem ações daquela empresa recebe o valor proporcional à quantidade de ações que possui, geralmente depositado direto na conta da corretora.</p>
+        <h3>O que é investir, de verdade</h3>
+        <p>Investir é todo desembolso de recursos — dinheiro ou até tempo — feito com a expectativa de um benefício futuro maior do que o que foi aplicado. Isso vai além da bolsa de valores: existe investimento financeiro, mas também investimento em conhecimento (um curso, uma pós), em meios de produção (um computador de trabalho, uma máquina) e até em experiências que geram algum retorno pra sua vida.</p>
+        <p>O contraponto é a despesa: um desembolso que não gera nenhum benefício mensurável sobre o capital. Um carro de passeio, uma festa de aniversário, a conta de luz — tudo isso é gasto necessário ou desejado, mas não investimento.</p>
         <ul>
-          <li>Nem toda empresa paga dividendos — algumas preferem reinvestir todo o lucro em crescimento.</li>
-          <li>O valor pago pode variar de um ano para o outro, dependendo do resultado da empresa.</li>
-          <li>Fundos Imobiliários (FIIs) funcionam de forma parecida, distribuindo o resultado dos aluguéis ou negociações.</li>
+          <li><b>Todo investimento é um gasto</b> — você está desembolsando dinheiro.</li>
+          <li><b>Mas nem todo gasto é um investimento</b> — só é investimento se gerar um retorno mensurável.</li>
+          <li>Um imóvel alugado é investimento; o carro que você usa pra passear é despesa (ele desvaloriza e só tira dinheiro do seu bolso).</li>
         </ul>
       </div>
     </div>
 
-    <div class="chapter">
+    <div class="chapter" id="cap2">
       <div class="num">2</div>
       <div>
-        <h3>Dividend Yield: o que é e como calcular</h3>
-        <p>O Dividend Yield (DY) mostra quanto uma empresa pagou em dividendos nos últimos 12 meses em relação ao preço atual da ação. A fórmula é simples: some os dividendos pagos por ação no período e divida pelo preço atual da ação, multiplicando por 100 para ter a porcentagem.</p>
-        <ul>
-          <li>Um DY de 8% significa que, ao preço de hoje, a ação pagou o equivalente a 8% do seu valor em proventos no último ano.</li>
-          <li>Cuidado com a "pegadinha do yield": se o preço da ação caiu muito, o DY sobe mesmo que o valor pago em reais tenha ficado igual ou menor.</li>
-          <li>Compare o DY com a média histórica da própria empresa e do setor, não só com o número isolado.</li>
-        </ul>
+        <h3>Investir x especular: qual a diferença</h3>
+        <p>Investir é aplicar recursos buscando rentabilidade no longo prazo, priorizando preservar o capital. Especular é tentar obter lucro rápido, aceitando mais risco em troca de mais retorno potencial. Na prática, quase todo investimento tem algum grau de risco — o que separa o investidor do especulador não é "ter risco ou não", é o horizonte de tempo e o quanto de risco cada um está disposto a assumir.</p>
+        <div style="overflow-x:auto; margin:16px 0;">
+        <table class="ledger">
+          <thead><tr><th></th><th>Especulador</th><th>Investidor</th></tr></thead>
+          <tbody>
+            <tr><td>Prazo das operações</td><td>Curto prazo</td><td>Longo prazo</td></tr>
+            <tr><td>Motivação principal</td><td>Lucro rápido</td><td>Preservação do capital</td></tr>
+            <tr><td>Relação com o risco</td><td>Maximiza</td><td>Minimiza</td></tr>
+            <tr><td>Estilo de portfólio</td><td>Concentrado</td><td>Diversificado</td></tr>
+            <tr><td>Chance de sucesso no longo prazo</td><td>Baixa</td><td>Alta</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Vale dizer: especulação não é "errada". Ela dá liquidez ao mercado — só conseguimos comprar uma ação, FII ou imóvel quando existe alguém disposto a vender, e essa pessoa costuma ser um especulador. O problema é confundir os dois papéis sem perceber, tratando uma aposta de curto prazo como se fosse um investimento de longo prazo.</p>
       </div>
     </div>
 
-    <div class="chapter">
+    <div class="chapter" id="cap3">
       <div class="num">3</div>
       <div>
-        <h3>Como montar uma carteira de dividendos</h3>
-        <p>Uma carteira de dividendos bem montada não é só uma lista das ações com maior yield do momento. O objetivo é ter uma renda que se mantenha razoavelmente estável mesmo quando um setor específico passa por um momento ruim.</p>
-        <ul>
-          <li>Diversifique entre setores diferentes: energia, financeiro, consumo, fundos imobiliários, etc.</li>
-          <li>Prefira empresas com histórico de pagamentos consistentes ao longo de vários anos, não só um ano excepcional.</li>
-          <li>Olhe também a saúde financeira da empresa — uma empresa endividada pode cortar dividendos rapidamente.</li>
-          <li>Use o <a href="simulador.html">simulador</a> para comparar cenários antes de decidir onde alocar mais dinheiro.</li>
-        </ul>
+        <h3>Onde investir: bancos, corretoras e horizontes de tempo</h3>
+        <p>De forma geral, existem dois canais para investir no Brasil: bancos tradicionais, que costumam oferecer uma linha mais limitada de produtos (muitas vezes com taxas maiores), e corretoras independentes, que dão acesso a uma variedade maior de investimentos, geralmente com custos menores. Nenhum dos dois é "o certo" — vale comparar taxas e a plataforma antes de escolher.</p>
+        <p>Outro ponto importante é alinhar o produto ao prazo em que você vai precisar do dinheiro:</p>
+        <div style="overflow-x:auto; margin:16px 0;">
+        <table class="ledger">
+          <thead><tr><th>Prazo</th><th>Horizonte</th><th>Produtos mais adequados</th></tr></thead>
+          <tbody>
+            <tr><td>Curto prazo</td><td>Até 1 ano</td><td>Poupança, CDB de liquidez diária, Tesouro Selic</td></tr>
+            <tr><td>Médio prazo</td><td>1 a 5 anos</td><td>Fundos multimercado, Tesouro Direto em geral, CDBs, fundos de renda fixa</td></tr>
+            <tr><td>Longo prazo</td><td>Acima de 5 anos</td><td>Ações, fundos imobiliários, imóveis</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Investir de forma consciente, alinhada aos seus objetivos e à sua tolerância a risco, costuma encurtar bastante o caminho até suas metas — o contrário também é verdade: usar o produto errado pro prazo errado é uma das formas mais comuns de se frustrar com investimentos.</p>
       </div>
     </div>
 
-    <div class="chapter">
+    <div class="chapter" id="cap4">
       <div class="num">4</div>
       <div>
-        <h3>Reinvestimento e juros compostos</h3>
-        <p>Reinvestir os dividendos recebidos — usá-los para comprar mais ações, em vez de gastar — é o que transforma uma renda pequena em uma bola de neve ao longo dos anos. Cada nova ação comprada passa a gerar seus próprios dividendos, que por sua vez compram mais ações.</p>
+        <h3>Qual é o seu perfil de investidor</h3>
+        <p>Antes de escolher qualquer ativo, vale entender qual é a sua tolerância a risco. As corretoras chamam isso de "suitability" e costumam pedir pra você responder um questionário no cadastro — mas entender o conceito ajuda a montar uma carteira que você realmente aguenta segurar nos momentos ruins.</p>
+        <div style="overflow-x:auto; margin:16px 0;">
+        <table class="ledger">
+          <thead><tr><th>Perfil</th><th>Prioridade</th><th>Tipos de investimento</th></tr></thead>
+          <tbody>
+            <tr><td><b>Conservador</b></td><td>Segurança e liquidez, prefere retornos previsíveis</td><td>Renda fixa; pequena parcela em fundos imobiliários</td></tr>
+            <tr><td><b>Moderado</b></td><td>Segurança com pouco risco</td><td>Renda fixa; fundos multimercado</td></tr>
+            <tr><td><b>Balanceado</b></td><td>Apetite para buscar ganhos mais expressivos</td><td>Renda fixa; multimercado; fundos imobiliários</td></tr>
+            <tr><td><b>Arrojado</b></td><td>Ganhos de longo prazo, aceita perder uma pequena parte do patrimônio</td><td>Portfólio diversificado com ações e câmbio</td></tr>
+            <tr><td><b>Agressivo</b></td><td>Máximo retorno possível, aceita perder uma parte relevante do patrimônio</td><td>Portfólio diversificado e concentrado em renda variável</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Não existe perfil "melhor" — existe o perfil que combina com sua realidade financeira e com o quanto de oscilação você consegue tolerar sem tomar decisões por pânico.</p>
+      </div>
+    </div>
+
+    <div class="chapter" id="cap5">
+      <div class="num">5</div>
+      <div>
+        <h3>Renda fixa: a base da carteira</h3>
+        <p>Na renda fixa, você empresta dinheiro para alguém — um banco, uma empresa ou o governo — e recebe de volta o valor emprestado mais juros, seguindo uma regra combinada desde o início. Existem duas lógicas de remuneração: <b>pré-fixada</b>, quando você já sabe a taxa de juros que vai receber no resgate, e <b>pós-fixada</b>, quando você sabe o indicador (como a Selic) mas não a taxa final, que só se confirma no vencimento.</p>
         <ul>
-          <li>Esse efeito é chamado de juros compostos, e ele funciona melhor quanto mais tempo você mantém a estratégia.</li>
-          <li>No <a href="simulador.html">simulador</a>, marque a opção "reinvestir dividendos automaticamente" para ver a diferença na prática.</li>
-          <li>Com o tempo, muitos investidores migram de "reinvestir tudo" para "viver da renda", quando o valor mensal já é suficiente para as despesas.</li>
+          <li><b>Poupança</b> — a mais tradicional e conservadora. Rende a cada 30 dias e é isenta de Imposto de Renda, mas normalmente rende menos que outras opções de renda fixa com risco parecido.</li>
+          <li><b>CDB (Certificado de Depósito Bancário)</b> — você empresta dinheiro para o banco. Rende mais que a poupança, mas paga Imposto de Renda; a liquidez varia conforme o título.</li>
+          <li><b>LCI e LCA</b> — captam recursos para os setores imobiliário (LCI) e agropecuário (LCA). Costumam pagar mais que a poupança, são isentas de Imposto de Renda, mas geralmente só podem ser resgatadas no vencimento.</li>
+          <li><b>Debênture</b> — um empréstimo para uma empresa não financeira. O risco principal é a empresa não conseguir pagar; a rentabilidade varia bastante conforme quem emite.</li>
+          <li><b>Tesouro Direto</b> — títulos da dívida pública, com o governo como garantidor. Existem versões atreladas à Selic, prefixadas e atreladas à inflação (IPCA), cada uma com um perfil de risco diferente.</li>
+        </ul>
+        <p class="small">A maioria desses produtos com emissor privado (CDB, LCI, LCA) conta com garantia do Fundo Garantidor de Créditos (FGC) até um limite por CPF e instituição — vale confirmar o valor atual antes de investir, porque ele pode mudar.</p>
+      </div>
+    </div>
+
+    <div class="chapter" id="cap6">
+      <div class="num">6</div>
+      <div>
+        <h3>Renda variável: ações, FIIs e outras classes</h3>
+        <p>Na renda variável, o retorno não é combinado antecipadamente — ele depende do desempenho do ativo, que pode subir ou cair conforme o mercado.</p>
+        <ul>
+          <li><b>Ações x fundos de ações</b> — comprar uma ação direto te torna sócio daquela empresa; um fundo de ações reúne o dinheiro de vários investidores e um gestor decide em quais ações investir, cobrando uma taxa por isso. Ações dão mais controle, fundos dão mais diversificação com menos trabalho de análise.</li>
+          <li><b>FIIs x imóvel físico</b> — um Fundo de Investimento Imobiliário permite investir em imóveis (ou em recebíveis do setor) comprando cotas na bolsa, com muito mais liquidez do que comprar um imóvel de verdade, e com valores de entrada bem menores.</li>
+          <li><b>Mercado futuro</b> — contratos que travam hoje um preço para uma negociação futura (moedas, índices, commodities agrícolas). É uma ferramenta mais avançada, usada tanto para proteção (hedge) quanto para especulação.</li>
+          <li><b>Fundos multimercado</b> — misturam diferentes classes de ativos (renda fixa, câmbio, ações) numa única carteira gerida por profissionais, buscando diversificação com um único investimento.</li>
+          <li><b>Criptomoedas</b> — ativos digitais baseados em blockchain, sem garantias como o FGC e com volatilidade historicamente bem mais alta que ações. Vale tratar como uma parcela pequena e consciente da carteira, nunca como reserva de emergência.</li>
         </ul>
       </div>
     </div>
 
-    <div class="chapter">
-      <div class="num">5</div>
+    <div class="chapter" id="cap7">
+      <div class="num">7</div>
       <div>
-        <h3>Erros comuns de quem está começando</h3>
-        <p>A maioria dos erros de iniciante em dividendos não é sobre escolher o ativo errado uma vez — é sobre hábitos que, repetidos por anos, atrapalham o resultado final.</p>
+        <h3>Como abrir conta numa corretora</h3>
+        <p>Abrir conta é mais simples do que parece e, na grande maioria das corretoras brasileiras, não custa nada:</p>
         <ul>
-          <li>Correr atrás só do maior DY do momento, ignorando se aquele patamar é sustentável.</li>
-          <li>Concentrar a carteira em poucos ativos ou em um único setor.</li>
-          <li>Vender no primeiro susto de mercado, em vez de olhar o histórico de longo prazo da empresa.</li>
-          <li>Não considerar o efeito da inflação e dos impostos ao comparar dividendos com outros investimentos.</li>
-          <li>Parar de aportar assim que os primeiros resultados demoram a aparecer — construir renda passiva é um processo de anos, não de meses.</li>
+          <li><b>Escolha a corretora</b> — confirme que ela é registrada na CVM e é participante da B3, compare taxas de corretagem e custódia, e veja se a plataforma (app ou home broker) agrada.</li>
+          <li><b>Preencha o cadastro</b> — normalmente CPF, RG ou CNH, comprovante de residência e dados de uma conta bancária no seu nome.</li>
+          <li><b>Aguarde a aprovação</b> — costuma levar de poucas horas a alguns dias úteis.</li>
+          <li><b>Transfira dinheiro</b> — via TED ou PIX, sempre de uma conta com a mesma titularidade (seu CPF), para a conta da corretora.</li>
+          <li><b>Comece a operar</b> — o dinheiro cai na sua conta na corretora e já pode ser usado para comprar ativos pelo home broker ou aplicativo.</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="chapter" id="cap8">
+      <div class="num">8</div>
+      <div>
+        <h3>Como comprar e vender ações e FIIs na prática</h3>
+        <ul>
+          <li><b>Busque o ticker</b> — o código do ativo (ex: TAEE11, MXRF11) na barra de busca do home broker ou app.</li>
+          <li><b>Veja o livro de ofertas</b> — a lista de preços que outros investidores estão dispostos a pagar (compra) ou receber (venda) naquele momento.</li>
+          <li><b>Escolha o tipo de ordem</b> — <i>a mercado</i> executa na hora, pelo melhor preço disponível; <i>limitada</i> só executa se o preço que você definiu for alcançado.</li>
+          <li><b>Informe a quantidade</b> — o lote padrão costuma ser de 100 ações; o "mercado fracionário" (ticker com sufixo F) permite comprar quantidades menores.</li>
+          <li><b>Confirme a ordem</b> — revise ticker, quantidade e preço antes de enviar.</li>
+          <li><b>Liquidação</b> — a operação é liquidada em D+2 (dois dias úteis depois), mas o ativo já aparece na sua carteira no mesmo dia.</li>
+          <li><b>Para vender</b> — o processo é o mesmo, só que na ponta de venda: você escolhe vender a mercado ou definir um preço mínimo.</li>
+        </ul>
+        <p class="small">Depois de comprar, você pode acompanhar preço, quantidade e resultado de cada ativo direto na <a href="carteira.html">Minha Carteira</a> deste site.</p>
+      </div>
+    </div>
+
+    <div class="chapter" id="cap9">
+      <div class="num">9</div>
+      <div>
+        <h3>Dividendos na prática: colhendo o que você plantou</h3>
+        <p>Dividendo é a parte do lucro que uma empresa decide distribuir aos seus acionistas. Fundos imobiliários fazem algo parecido, distribuindo o resultado dos aluguéis ou das negociações da carteira do fundo. É esse fluxo recorrente que transforma uma carteira de investimentos numa fonte de renda passiva, mês após mês.</p>
+        <p>Antes de comprar pensando só no Dividend Yield mais alto do momento, vale lembrar: um DY muito acima da média pode ser reflexo de um preço em queda, não necessariamente de uma empresa mais generosa. Use o <a href="simulador.html">simulador</a> para projetar o crescimento dos dividendos ano a ano com números realistas, e a <a href="carteira.html">Minha Carteira</a> para acompanhar o que você já tem.</p>
+      </div>
+    </div>
+
+    <div class="chapter" id="cap10">
+      <div class="num">10</div>
+      <div style="width:100%;">
+        <h3>3 livros que todo investidor iniciante deveria ler</h3>
+        <p>Nenhum simulador substitui entender a lógica por trás das decisões financeiras. Estes três livros, cada um à sua maneira, mudam a forma como você enxerga dinheiro, risco e patrimônio.</p>
+
+        <div class="grid grid-3" style="margin-top:18px;">
+          <div class="card">
+            <div class="icon">1</div>
+            <h3 style="font-size:17px;">O Investidor Inteligente</h3>
+            <p class="small" style="margin-bottom:10px;"><i>Benjamin Graham</i> — considerado por Warren Buffett o melhor livro sobre investimentos já escrito.</p>
+            <p>Graham defende que preço e valor são coisas diferentes: preço é o que o mercado cobra hoje, valor é o que o negócio realmente vale. Ele ensina a comprar com uma "margem de segurança" — pagar bem menos do que o ativo vale, para se proteger de erros de avaliação. Também insiste que o maior inimigo do investidor costuma ser ele mesmo: decisões tomadas por medo ou euforia destroem mais patrimônio do que qualquer crise de mercado.</p>
+          </div>
+          <div class="card">
+            <div class="icon">2</div>
+            <h3 style="font-size:17px;">A Psicologia do Dinheiro</h3>
+            <p class="small" style="margin-bottom:10px;"><i>Morgan Housel</i> — um dos livros de finanças mais lidos dos últimos anos.</p>
+            <p>Housel argumenta que sucesso financeiro depende muito mais de comportamento do que de inteligência técnica: paciência, consistência e a capacidade de não se comparar com os outros pesam mais do que qualquer fórmula. Uma de suas ideias centrais é que poupar é a diferença entre sua renda e seu ego — muita gente gasta para parecer rica, e isso é justamente o que impede de construir riqueza de verdade.</p>
+          </div>
+          <div class="card">
+            <div class="icon">3</div>
+            <h3 style="font-size:17px;">Pai Rico, Pai Pobre</h3>
+            <p class="small" style="margin-bottom:10px;"><i>Robert Kiyosaki</i> — best-seller que mudou a forma como milhões de pessoas pensam sobre ativos.</p>
+            <p>Kiyosaki propõe uma definição simples e provocativa: ativo é o que coloca dinheiro no seu bolso todo mês; passivo é o que tira. Por esse critério, até uma casa própria pode ser um passivo se ela só gerar despesas. A mensagem central é que construir riqueza depende de acumular ativos que gerem renda, em vez de acumular bens que parecem valiosos mas só consomem dinheiro.</p>
+          </div>
+        </div>
+        <p class="small" style="margin-top:16px;">Esses são resumos com fins educativos, escritos com nossas próprias palavras — nenhum deles substitui a leitura completa dos livros originais.</p>
       </div>
     </div>
 
@@ -167,28 +294,28 @@
     </div>
     <div class="panel" style="padding:6px 24px;">
       <details class="accordion-item" open>
+        <summary class="q">Preciso de muito dinheiro para abrir conta numa corretora? <span class="plus">+</span></summary>
+        <div class="a">Não. A maioria das corretoras brasileiras não cobra nada para abrir conta nem exige valor mínimo de depósito. O valor mínimo de verdade é o preço de um lote do ativo que você quer comprar.</div>
+      </details>
+      <details class="accordion-item">
+        <summary class="q">Se a corretora quebrar, eu perco meu dinheiro? <span class="plus">+</span></summary>
+        <div class="a">As ações, FIIs e outros ativos ficam custodiados na B3 em seu nome (CPF), não na corretora. Se a corretora fechar, o patrimônio continua seu e pode ser transferido para outra. O dinheiro parado em conta na corretora, sem estar investido, é o ponto mais exposto.</div>
+      </details>
+      <details class="accordion-item">
         <summary class="q">Dividend yield alto é sempre bom sinal? <span class="plus">+</span></summary>
         <div class="a">Não necessariamente. Um DY muito acima da média do setor pode indicar que o preço da ação caiu bastante (o que aumenta o yield artificialmente) ou que a empresa distribuiu um provento extraordinário que não deve se repetir. Vale olhar o histórico de vários anos, não só o número dos últimos 12 meses.</div>
       </details>
       <details class="accordion-item">
-        <summary class="q">Preciso de muito dinheiro para começar? <span class="plus">+</span></summary>
-        <div class="a">Não. Muitas ações e FIIs da B3 custam poucos reais por cota, e dá para comprar um único lote com valores baixos. No começo, a constância dos aportes importa mais do que o tamanho de cada um.</div>
+        <summary class="q">Qual a diferença entre ordem a mercado e ordem limitada? <span class="plus">+</span></summary>
+        <div class="a">A ordem a mercado executa na hora, pelo melhor preço disponível no momento — mais rápida, mas você não controla o preço exato. A ordem limitada só executa se o mercado alcançar o preço que você definiu — você controla o preço, mas pode não ser executada.</div>
       </details>
       <details class="accordion-item">
         <summary class="q">Dividendos de ações têm Imposto de Renda? <span class="plus">+</span></summary>
         <div class="a">Hoje, dividendos pagos por ações são isentos de Imposto de Renda para pessoa física. Já os Juros sobre Capital Próprio (JCP) têm retenção na fonte. As regras podem mudar — sempre confirme a legislação vigente antes de decidir.</div>
       </details>
       <details class="accordion-item">
-        <summary class="q">Qual a diferença entre dividendo e JCP? <span class="plus">+</span></summary>
-        <div class="a">Os dois distribuem lucro aos acionistas. O dividendo é isento de IR e sai do lucro líquido; o JCP é dedutível para a empresa, mas chega ao investidor com 15% de imposto retido na fonte.</div>
-      </details>
-      <details class="accordion-item">
-        <summary class="q">Vale a pena reinvestir os dividendos recebidos? <span class="plus">+</span></summary>
-        <div class="a">Para quem está formando patrimônio, reinvestir costuma acelerar o crescimento da carteira graças aos juros compostos. Quem já vive de renda passiva pode preferir usar os proventos para as despesas do dia a dia.</div>
-      </details>
-      <details class="accordion-item">
-        <summary class="q">Quantos ativos diferentes devo ter na carteira? <span class="plus">+</span></summary>
-        <div class="a">Não existe número mágico, mas concentrar tudo em uma ou duas empresas aumenta bastante o risco. Muitos investidores buscam entre 10 e 20 ativos, espalhados por setores diferentes.</div>
+        <summary class="q">Qual livro devo ler primeiro para começar a investir? <span class="plus">+</span></summary>
+        <div class="a">Para organizar a relação com dinheiro no dia a dia, "A Psicologia do Dinheiro" costuma ser o mais acessível. "Pai Rico, Pai Pobre" ajuda a mudar a forma de pensar sobre ativos e passivos. "O Investidor Inteligente" é mais denso e entra em análise de ações — vale ler depois dos outros dois.</div>
       </details>
     </div>
   </div>
@@ -211,19 +338,20 @@
       <a href="index.html" class="brand" style="color:var(--paper); margin-bottom:12px;">
         <span class="mark">R+D</span><span>Renda Extra Dividendos</span>
       </a>
-      <p class="disclaimer">Este guia tem caráter educativo e não substitui a orientação de um profissional habilitado. Não é recomendação de compra ou venda de nenhum ativo.</p>
+      <p class="disclaimer">Este guia tem caráter educativo e não substitui a orientação de um profissional habilitado. Não é recomendação de compra ou venda de nenhum ativo. Os resumos de livros são interpretações próprias com fins educativos.</p>
     </div>
     <div>
       <h4>Navegar</h4>
       <a href="index.html">Início</a>
       <a href="simulador.html">Simulador</a>
       <a href="carteira.html">Minha Carteira</a>
+      <a href="assistente.html">Assistente IA</a>
       <a href="aprenda.html">Aprenda a Investir</a>
     </div>
     <div>
       <h4>Sobre</h4>
       <a href="aprenda.html#faq">Perguntas frequentes</a>
-      <a href="aprenda.html">Glossário do investidor</a>
+      <a href="aprenda.html#cap10">Livros recomendados</a>
     </div>
   </div>
   <div class="wrap bottom"><span>© <span id="anoAtual"></span> Renda Extra Dividendos. Conteúdo educativo, não é recomendação de investimento.</span></div>
