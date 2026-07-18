@@ -1,19 +1,16 @@
 // Service worker simples: cacheia os arquivos do site para funcionar
-// offline e permitir "Instalar app" no navegador. Sem isso, o Chrome/Android
-// não considera o site instalável.
+// offline e permitir "Instalar app" no navegador.
 
-const CACHE_NAME = 'renda-extra-dividendos-v1';
+const CACHE_NAME = 'renda-extra-dividendos-v2';
 const ARQUIVOS_ESSENCIAIS = [
   'index.html',
-  'simulador.html',
-  'carteira.html',
   'aprenda.html',
+  'ofertas.html',
+  'privacidade.html',
   'style.css',
+  'config.js',
   'main.js',
   'dados.js',
-  'graficos.js',
-  'simulador.js',
-  'carteira.js',
   'manifest.json',
   'icon-192.png',
   'icon-512.png',
@@ -35,7 +32,6 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// estratégia: tenta a rede primeiro (pra pegar atualizações), cai pro cache se offline
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   event.respondWith(

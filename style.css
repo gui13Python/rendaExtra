@@ -304,14 +304,6 @@ section{ padding:64px 0; }
 @media (max-width:780px){ .grid-2{ grid-template-columns:1fr; } }
 @media (max-width:560px){ .grid-3,.grid-4{ grid-template-columns:1fr; } }
 
-/* layouts de duas colunas usados no simulador e na carteira
-   (antes iam via style="" inline, o que quebrava no celular) */
-.split-form{ display:grid; grid-template-columns:.9fr 1.1fr; align-items:start; gap:32px; }
-.split-form-wide{ display:grid; grid-template-columns:.85fr 1.15fr; align-items:start; gap:32px; }
-@media (max-width:900px){
-  .split-form, .split-form-wide{ grid-template-columns:1fr; }
-}
-
 .card{
   background:#FBF8EF;
   border:1px solid var(--line);
@@ -340,24 +332,6 @@ section{ padding:64px 0; }
 .stat-card.paper .k{ color:var(--ink-soft); }
 .stat-card.paper .v{ color:var(--green-deep); }
 
-/* ---------- formulários ---------- */
-.field{ margin-bottom:16px; }
-.field label{ display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:var(--green-deep); }
-.field .hint{ font-size:12px; color:var(--ink-soft); margin-top:4px; }
-.field input, .field select{
-  width:100%; padding:11px 12px; border:1px solid var(--line-strong);
-  border-radius:var(--radius); background:#FBF8EF; font-family:var(--font-mono);
-  font-size:14.5px; color:var(--ink);
-}
-.field input:focus, .field select:focus{ border-color:var(--gold-bright); outline:none; box-shadow:0 0 0 3px rgba(201,162,39,.18); }
-.field-row{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
-@media (max-width:640px){ .field-row{ grid-template-columns:1fr; } }
-
-.panel{
-  background:#FBF8EF; border:1px solid var(--line-strong); border-radius:var(--radius);
-  padding:28px; box-shadow:var(--shadow);
-}
-
 /* ---------- tabela estilo extrato ---------- */
 table.ledger{ width:100%; border-collapse:collapse; font-family:var(--font-mono); font-size:13.5px; }
 table.ledger th{
@@ -371,7 +345,7 @@ table.ledger .num{ text-align:right; }
 .tag-up{ color:var(--green); font-weight:600; }
 .tag-down{ color:var(--brick); font-weight:600; }
 
-/* ---------- ticker chips (sugestões) ---------- */
+/* ---------- chips (sumário do guia) ---------- */
 .chip{
   display:inline-flex; align-items:center; gap:6px;
   border:1px solid var(--line-strong); border-radius:20px;
@@ -379,7 +353,6 @@ table.ledger .num{ text-align:right; }
   cursor:pointer; background:#FBF8EF; margin:4px 6px 4px 0;
 }
 .chip:hover{ border-color:var(--gold-bright); background:var(--green-mist); }
-.chip small{ color:var(--ink-soft); }
 
 /* ---------- accordion (aprenda) ---------- */
 .accordion-item{ border-bottom:1px solid var(--line); }

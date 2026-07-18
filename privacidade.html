@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — Renda Extra Dividendos</title>
+<meta name="description" content="Política de privacidade do Renda Extra Dividendos: uso de cookies, anúncios personalizados, links de afiliado e armazenamento local de dados.">
+<link rel="canonical" href="https://rendaextradividendos.com.br/privacidade.html">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#17362A">
+<link rel="icon" href="favicon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+
+<div class="ticker-tape"><div class="track" id="tickerTrack"></div></div>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <span class="mark">R+D</span>
+      <span>Renda Extra <small>Dividendos</small></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="index.html">Início</a>
+      <a href="ofertas.html">Livros em Ofertas</a>
+      <a href="aprenda.html">Aprenda a Investir</a>
+    </nav>
+    <a href="index.html" class="nav-cta">Voltar ao início</a>
+    <button class="burger" id="burger">☰</button>
+  </div>
+</header>
+
+<section>
+  <div class="wrap panel" style="max-width:820px; margin:0 auto;">
+    <div class="eyebrow">Última atualização: <span id="dataAtualizacao"></span></div>
+    <h1 style="font-size:clamp(26px,3.4vw,34px)">Política de Privacidade</h1>
+    <p style="color:var(--ink-soft)">Esta política explica quais dados o Renda Extra Dividendos coleta, como cookies e anúncios são usados no site, e como você pode controlar isso.</p>
+
+    <div class="tear" style="margin:24px 0;"></div>
+
+    <h3>1. Dados armazenados no seu navegador</h3>
+    <p>Este site usa o armazenamento local (localStorage) do seu navegador para salvar: os ativos da sua carteira (página Minha Carteira), tokens de API que você mesmo cadastra (brapi.dev, Groq) e preferências de uso. Esses dados <b>não são enviados aos nossos servidores</b> — o site é estático e não tem backend próprio armazenando essas informações. Você pode apagá-los a qualquer momento limpando os dados do site no seu navegador.</p>
+
+    <h3>2. Chamadas a serviços de terceiros</h3>
+    <p>Ao usar a busca de cotação (Minha Carteira e Simulador) ou o Assistente IA, seu navegador faz requisições diretamente para a brapi.dev e para a Groq, respectivamente, incluindo o token/chave que você cadastrou. Essas empresas têm suas próprias políticas de privacidade, que recomendamos consultar.</p>
+
+    <h3>3. Cookies e anúncios</h3>
+    <p>Este site pode exibir anúncios de redes como o Google AdSense e a AdCash. Essas redes podem usar cookies e identificadores para personalizar os anúncios exibidos com base na sua navegação, inclusive em outros sites. Você pode:</p>
+    <ul>
+      <li>Desativar anúncios personalizados do Google em <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>;</li>
+      <li>Gerenciar preferências gerais de anúncios em <a href="https://www.aboutads.info/choices" target="_blank" rel="noopener">aboutads.info/choices</a>;</li>
+      <li>Bloquear cookies de terceiros diretamente nas configurações do seu navegador.</li>
+    </ul>
+
+    <h3>4. Links de afiliado</h3>
+    <p>Este site participa do programa de afiliados da Shopee. Isso significa que, se você clicar em um link de afiliado (como os da página <a href="ofertas.html">Ofertas</a>) e realizar uma compra, podemos receber uma comissão, sem qualquer custo adicional para você. Essa relação comercial não influencia o conteúdo educativo sobre investimentos publicado no site.</p>
+
+    <h3>5. Seus direitos (LGPD)</h3>
+    <p>Como este site não coleta nem armazena dados pessoais em servidor próprio, a maior parte do tratamento de dados ocorre através de terceiros (redes de anúncios, brapi.dev, Groq). Para exercer direitos de acesso, correção ou exclusão de dados tratados por essas empresas, consulte diretamente as políticas de privacidade delas.</p>
+
+    <h3>6. Contato</h3>
+    <p>Dúvidas sobre esta política podem ser enviadas para o e-mail de contato informado no rodapé deste site.</p>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <a href="index.html" class="brand" style="color:var(--paper); margin-bottom:12px;">
+        <span class="mark">R+D</span><span>Renda Extra Dividendos</span>
+      </a>
+      <p class="disclaimer">Conteúdo educativo, não é recomendação de investimento.</p>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <a href="index.html">Início</a>
+      <a href="ofertas.html">Livros em Ofertas</a>
+      <a href="aprenda.html">Aprenda a Investir</a>
+    </div>
+    <div>
+      <h4>Sobre</h4>
+      <a href="aprenda.html#faq">Perguntas frequentes</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+    </div>
+  </div>
+  <div class="wrap bottom"><span>© <span id="anoAtual"></span> Renda Extra Dividendos.</span></div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+document.getElementById('dataAtualizacao').textContent = new Date().toLocaleDateString('pt-BR', {year:'numeric', month:'long', day:'numeric'});
+</script>
+</body>
+</html>

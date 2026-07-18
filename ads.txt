@@ -1,0 +1,7 @@
+# IMPORTANTE: troque a linha abaixo pelo seu ID real do Google AdSense
+# (você encontra em adsense.google.com > Contas > Informações da conta > ID do editor)
+# Formato: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-COLE-SEU-PUBLISHER-ID-AQUI, DIRECT, f08c47fec0942fa0
+
+# Se for usar a AdCash também, adicione a linha que eles fornecerem no
+# painel deles (Configurações > ads.txt) — cada rede tem sua própria linha.
