@@ -16,6 +16,9 @@
 <meta name="twitter:title" content="Renda Extra Dividendos — Aprenda a Investir do Zero">
 <meta name="twitter:description" content="Guia completo para aprender a investir e construir uma renda extra com dividendos.">
 <link rel="stylesheet" href="style.css">
+<!-- Video.js e Videojs-IMA Stylesheets -->
+<link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/videojs-ima/1.11.0/videojs.ima.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,6 +38,16 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="R+D Dividendos">
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+<script type="text/javascript">
+    aclib.runInPagePush({
+        zoneId: '11752754',
+        maxAds: 2,
+    });
+</script>
+
+
+
 </head>
 <body>
 
@@ -55,6 +68,19 @@
     <button class="burger" id="burger">☰</button>
   </div>
 </header>
+
+<!-- SEÇÃO DO PLAYER DE VÍDEO COM ANÚNCIO IMA ADEXCHANGE -->
+<section style="padding: 20px 0; background-color: var(--green-mist, #f4f7f5); text-align: center;">
+  <div class="wrap" style="max-width: 640px; margin: 0 auto;">
+    <div style="margin-bottom: 10px; font-weight: bold; color: var(--ink-dark);">Confira o nosso Destaque em Vídeo:</div>
+    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; border-radius: 8px;">
+      <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="640" height="360" poster="favicon-48.png" data-setup='{}' style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        <source src="https://www.youtube.com/shorts/y6AGBSJZQ3c?feature=share" type="video/mp4">
+        <p class="vjs-no-js">Para assistir a este vídeo, por favor, ative o JavaScript.</p>
+      </video>
+    </div>
+  </div>
+</section>
 
 <section class="hero">
   <div class="wrap">
@@ -105,7 +131,7 @@
   <div class="wrap">
     <div class="section-head center" style="margin-inline:auto">
       <div class="eyebrow" style="justify-content:center">Como começar</div>
-      <h2>Três passos até o seu primeiro investimento</h2>
+      <h2>Três passos até o seu primeiro investmento</h2>
       <p style="margin-inline:auto">Nada de planilha complicada. É só aprender, escolher os livros certos e dar o primeiro passo.</p>
     </div>
     <div class="grid grid-3">
@@ -215,16 +241,30 @@
 <script src="config.js"></script>
 <script src="dados.js"></script>
 <script src="main.js"></script>
+
+<!-- Scripts do SDK de Anúncios IMA e Video.js -->
+<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+<script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-ima/1.11.0/videojs.ima.min.js"></script>
+
 <script>
 document.addEventListener('DOMContentLoaded', ()=>{
   const tbody = document.querySelector('#tabelaSugeridos tbody');
-  ATIVOS_REFERENCIA.slice(0,8).forEach(a=>{
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td><b>${a.ticker}</b><br><span class="small">${a.nome}</span></td>
-      <td>${a.setor}</td>
-      <td class="num">${formatarBRL(a.preco)}</td>
-      <td class="num tag-up">${formatarNum(a.dy,1)}%</td>`;
-    tbody.appendChild(tr);
+  if(tbody && typeof ATIVOS_REFERENCIA !== 'undefined') {
+    ATIVOS_REFERENCIA.slice(0,8).forEach(a=>{
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td><b>${a.ticker}</b><br><span class="small">${a.nome}</span></td>
+        <td>${a.setor}</td>
+        <td class="num">${formatarBRL(a.preco)}</td>
+        <td class="num tag-up">${formatarNum(a.dy,1)}%</td>`;
+      tbody.appendChild(tr);
+    });
+  }
+
+  // Inicialização do Player com Anúncio IMA
+  const player = videojs("my-video");
+  player.ima({
+      adTagUrl: "https://youradexchange.com/video/select.php?r=11752386",
   });
 });
 </script>
